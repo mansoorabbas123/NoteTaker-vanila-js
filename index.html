@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Note Taker</title>
+  </head>
+
+  <body>
+    <!-- loader  -->
+    <div id="loader" class="center"></div>
+    <header>
+      <div class="logo"><i class="fas fa-clipboard"></i></div>
+      <h1>Note Taker</h1>
+    </header>
+
+    <!-- modal for adding notes  -->
+    <div class="modal">
+      <div class="modal-title">
+        <h4>Add a New Note</h4>
+        <div class="hid-modal"><i class="fas fa-window-close fa-2x"></i></div>
+      </div>
+
+      <form action="">
+        <div class="input-field">
+          <label for="title">Note Title</label>
+          <input type="text" name="" id="title" required />
+        </div>
+        <div class="input-field">
+          <label for="desc">Note Description</label>
+          <textarea name="" id="desc" cols="30" rows="10" required></textarea>
+        </div>
+        <div class="input-field">
+          <input class="button" type="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+
+    <!-- modal for updating note  -->
+    <div class="edit-modal">
+      <div class="modal-title">
+        <h4>Edit your Note</h4>
+        <div class="hide-edit-modal">
+          <i class="fas fa-window-close fa-2x"></i>
+        </div>
+      </div>
+
+      <form action="">
+        <div class="input-field">
+          <label for="title">Note Title</label>
+          <input type="text" name="" id="edit-title" required />
+        </div>
+        <div class="input-field">
+          <label for="desc">Note Description</label>
+          <textarea
+            name=""
+            id="edit-desc"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+        </div>
+        <div class="input-field">
+          <button class="button" id="update">update</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- notes  -->
+    <section class="content">
+      <div class="cards-container"></div>
+    </section>
+    <div class="add-task">
+      <i class="far fa-plus-square fa-2x"></i>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
